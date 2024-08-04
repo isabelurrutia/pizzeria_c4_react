@@ -1,4 +1,4 @@
-Deploy: https://isabelurrutia.github.io/hito_1_c4_reac
+Deploy: https://isabelurrutia.github.io/hito_1_c4_react/
 
 
 # React + Vite
