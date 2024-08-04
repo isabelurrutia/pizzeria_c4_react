@@ -21,7 +21,7 @@ const Navbar = () => {
                     }   
                 
             </section>
-            <button>🛒 Total: ${separador_de_miles(total)}</button>
+            <button className='botonTotal'>🛒 Total: ${separador_de_miles(total)}</button>
         </nav>
     )
 }

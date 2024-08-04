@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.Pizzas{
+    width: 30%;
+    border: solid 1px rgb(191, 189, 189);
+    color: #6b6a6a;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+.NombrePizza{
+    border-bottom: solid 1px rgb(191, 189, 189);
+    color: black;
+    text-align: start;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+.Ingredientes{
+    border-bottom: solid 1px rgb(191, 189, 189);
+    padding: 10px;
+}
+.Ingredientes p{
+    padding-bottom: 10px;
+}
+.botonesCard{
+    margin-bottom: 10px;
+}
+.botonVerMas{
+    background-color: white;
+    border: solid 1px rgb(191, 189, 189);
+    color: #242424;
+    border-radius: 5px;
+    margin-right: 30px;
+    width: 100px;
+    height: 30px;
+}
+.botonAñadir{
+    border: solid 1px rgb(191, 189, 189);
+    background-color: #242424;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}

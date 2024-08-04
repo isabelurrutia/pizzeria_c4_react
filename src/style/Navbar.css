@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 nav{
+    background-color: #242424;
     display: flex;
     justify-content: space-between;
     height: 10vh;
@@ -30,13 +31,14 @@ li, section p{
     width: 90px;
     text-align: center;
 }
-button{
+.botonTotal{
     height: 5vh;
     background-color: black;
     border: solid 1px rgb(89, 168, 213);
     color: rgb(89, 168, 213);
     border-radius: 5px;
     width: 160px ;
+    margin-left: 5px;
 }
 section p{
     margin-right: 5px;
