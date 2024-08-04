@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+}
+section{
+    display: flex;
+}
+h4{
+    margin: 5px;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 5px;
+
+}
+li, section p{
+    background-color: black;
+    border: solid 1px grey;
+    border-radius: 5px;
+    width: 90px;
+    text-align: center;
+}
+button{
+    height: 5vh;
+    background-color: black;
+    border: solid 1px rgb(89, 168, 213);
+    color: rgb(89, 168, 213);
+    border-radius: 5px;
+    width: 160px ;
+}
+section p{
+    margin-right: 5px;
+}
