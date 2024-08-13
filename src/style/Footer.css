@@ -6,8 +6,12 @@
 }
 footer{
     background-color: #242424;
-    height: 15%;
+    height: 5%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
 }
