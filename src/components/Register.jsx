@@ -26,9 +26,11 @@ const Register = () => {
         }
         if (clave.length < 6){
             setCorta(true);
+        return;
         }
         if (clave !== confirmacion ){
             setDesigual(true);
+        return;
         }
         
         // Si todas las validaciones pasan limpio

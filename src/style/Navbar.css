@@ -10,6 +10,7 @@ nav{
     justify-content: space-between;
     height: 15%;
     align-items: center;
+    color: white;
 }
 section{
     display: flex;
@@ -24,6 +25,7 @@ ul{
     align-items: center;
     list-style-type: none;
     gap: 5px;
+    margin-top: 2px;
 
 }
 li, section p{
