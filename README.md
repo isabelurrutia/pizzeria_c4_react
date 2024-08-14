@@ -1,4 +1,4 @@
-Deploy: [https://isabelurrutia.github.io/hito_1_c4_react/]
+Deploy:  [https://isabelurrutia.github.io/pizzeria_c4_react/]
 
 
 # React + Vite
