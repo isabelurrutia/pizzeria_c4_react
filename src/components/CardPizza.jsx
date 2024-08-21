@@ -6,14 +6,14 @@ const CardPizza = ({name, price, ingredients, img, id, desc}) => {
         <div className="Pizzas" key={id}>
             <img src={img} alt={name} />
             <div className="NombrePizza">
-                <h3>Pizza {name} {id}</h3>
+                <h3>Pizza {name}</h3>
                 <p>{desc}</p>
             </div>
             <div className="Ingredientes">
                 <p>Ingredientes</p>
-                <ul>
+                <ul className="listIng">
                     {ingredients.map((ingredient, index) => (
-                        <li key={index}>🍕 {ingredient}</li>
+                        <li className="cadaIng" key={index}>🍕 {ingredient}</li>
                     ))}
                 </ul>
                 

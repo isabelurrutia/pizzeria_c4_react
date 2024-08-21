@@ -10,13 +10,13 @@ const Navbar = () => {
                 <h4>Pizzeria Mamma Mía!</h4>
                 <p>🍕Home</p>
                 {token? 
-                    <ul>
-                        <li>🔐Profile</li>
-                        <li>🔒Logout</li>
+                    <ul className='botonesLogin'>
+                        <li className='cadaBotonLogin'>🔐Profile</li>
+                        <li className='cadaBotonLogin'>🔒Logout</li>
                     </ul>:
-                    <ul>
-                        <li>🔐Login</li>
-                        <li>🔐Register</li>
+                    <ul className='botonesLogin'>
+                        <li className='cadaBotonLogin'>🔐Login</li>
+                        <li className='cadaBotonLogin'>🔐Register</li>
                     </ul>
                     }   
                 

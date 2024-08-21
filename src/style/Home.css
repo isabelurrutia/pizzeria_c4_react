@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 .tiposDePizzas{
-    height: 50%;
     border: solid 1px rgb(236, 209, 140);
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 5px;
     padding: 15px;
+    row-gap: 15px;
 }

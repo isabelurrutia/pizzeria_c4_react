@@ -15,11 +15,12 @@ nav{
 section{
     display: flex;
     align-items: center;
+    justify-content: space-around
 }
 h4{
     margin: 5px;
 }
-ul{
+.botonesLogin {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,7 +29,7 @@ ul{
     margin-top: 2px;
 
 }
-li, section p{
+.cadaBotonLogin, section p{
     background-color: black;
     border: solid 1px grey;
     border-radius: 5px;
@@ -47,5 +48,5 @@ li, section p{
     margin-left: 5px;
 }
 section p{
-    margin-right: -20px;
+    margin-right: 5px;
 }
