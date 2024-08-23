@@ -1,0 +1,13 @@
+.totalGeneral{
+    color: black;
+    padding: 5%;
+    text-align: center;
+}
+.pagarCarro{
+    background-color: rgb(89, 168, 213) ;
+    color: white;
+    padding: 1%;
+    margin-top: 1%;
+    border-radius: 5%;
+    border: 1px solid orange;
+}
