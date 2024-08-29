@@ -1,4 +1,5 @@
 import '../style/Navbar.css'
+import { Link } from "react-router-dom";
 import {separador_de_miles} from '../utils/funciones_valores.jsx'
 
 const Navbar = () => {
@@ -8,20 +9,32 @@ const Navbar = () => {
         <nav>
             <section>
                 <h4>Pizzeria Mamma Mía!</h4>
-                <p>🍕Home</p>
+                <p>
+                    <Link to="/">🍕Home</Link>
+                </p>
                 {token? 
                     <ul className='botonesLogin'>
-                        <li className='cadaBotonLogin'>🔐Profile</li>
+                        <li className='cadaBotonLogin'>
+                            <Link to="/profile">🔐Profile </Link>
+                        </li>
                         <li className='cadaBotonLogin'>🔒Logout</li>
                     </ul>:
                     <ul className='botonesLogin'>
-                        <li className='cadaBotonLogin'>🔐Login</li>
-                        <li className='cadaBotonLogin'>🔐Register</li>
+                        <li className='cadaBotonLogin'>
+                            <Link to="/profile">🔐Login </Link>
+                            </li>
+                        <li className='cadaBotonLogin'>
+                            <Link to="/register">🔐Register </Link>
+                            </li>
                     </ul>
                     }   
                 
             </section>
-            <button className='botonTotal'>🛒 Total: ${separador_de_miles(total)}</button>
+            <button className='botonTotal'>
+                <Link to="/cart">
+                    🛒 Total: ${separador_de_miles(total)}
+                </Link>
+            </button>
         </nav>
     )
 }

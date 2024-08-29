@@ -1,5 +1,5 @@
 import {pizzaCart} from '../pizzas'
-import CartPizza from './CartPizza'
+import CartPizza from '../components/CartPizza'
 import {useState} from 'react'
 import { separador_de_miles } from "../utils/funciones_valores"
 import '../style/Cart.css'

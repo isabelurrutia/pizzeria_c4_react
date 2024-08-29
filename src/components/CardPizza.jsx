@@ -1,6 +1,7 @@
 
 import { separador_de_miles } from "../utils/funciones_valores"
 import '../style/CardPizza.css'
+import { Link } from "react-router-dom";
 
 const CardPizza = ({name, price, ingredients, img, id, desc}) => {
     return (
@@ -21,7 +22,9 @@ const CardPizza = ({name, price, ingredients, img, id, desc}) => {
             </div>
             <h2>Precio: ${separador_de_miles(price)}</h2>
             <div className="botonesCard">
-                <button className="botonVerMas">Ver Más 👀</button>
+                <button className="botonVerMas">
+                    <Link to="/pizza/p001">Ver Más 👀</Link>
+                </button>
                 <button className="botonAñadir">Añadir 🛒</button>
             </div>
         </div>
