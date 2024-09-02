@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.formularioLogin{
+    color: black;
+    text-align: center;
+    padding: 100px;
+    margin: 2px;
+    border: 1px solid orange;
+}
+.enviarLogin{
+    background-color: rgb(45, 169, 36) ;
+    color: white;
+    padding: 2%;
+    margin-top: 5%;
+    border-radius: 5%;
+}
+.inputEmailLogin, .inputClaveLogin {
+    border: 1px solid orange;
+    width: 150px;
+    margin-left: 5px;
+}

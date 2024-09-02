@@ -1,0 +1,21 @@
+.contenedorNotFound{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    color: black;
+}
+.img404{
+    width: 50%;
+    padding-top: 30px;
+    
+}
+.ContenedorBotonInicio{
+    margin: 15px;
+    padding: 5px;
+    width: 20%;
+    background-color: black;
+}
+.BotonInicio{
+    color: white;
+    text-decoration: none;
+}

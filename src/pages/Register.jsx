@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../style/Register.css'
 
 const Register = () => {
     const [email, setEmail]= useState('');
@@ -41,34 +42,34 @@ const Register = () => {
         };
     return (
         <>
-            <form className="formulario position-absolute top-50 start-50 translate-middle"  onSubmit={validarDatos}>
+            <form className="formularioRegister"  onSubmit={validarDatos}>
             
-                <div className="form-group m-1">
+                <div className="formEmailRegister">
                     <label>Email</label>
                     <input
                     type="text"
                     name="email"
-                    className="form-control"
+                    className="inputEmailRegister"
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     />
                 </div>
-                <div className="form-group m-1">
+                <div className="formClaveRegister">
                     <label>Contraseña</label>
                     <input
                     type="text"
                     name="clave"
-                    className="form-control"
+                    className="inputClaveRegister"
                     onChange={(e) => setClave(e.target.value)}
                     value={clave}
                     />
                 </div>
-                <div className="form-group m-1">
+                <div className="formConfirmarRegister">
                     <label>Confirmar contraseña</label>
                     <input
                     type="text"
                     name="confirmacion"
-                    className="form-control"
+                    className="inputConfirmarRegister"
                     onChange={(e) => setConfirmacion(e.target.value)}
                     value={confirmacion}
                     />
@@ -76,8 +77,7 @@ const Register = () => {
                 {vacio ? <p className='text-danger'>Todos los campos son obligatorios</p> : null}
                 {corta ? <p className='text-danger'>la clave debe tener al menos 6 caracteres</p> : null}
                 {desigual? <p className='text-danger'>la clave y la confirmacion deben ser iguales</p> : null}
-                <button type="submit" className="btn
-                btn-primary m-1">Enviar</button>
+                <button type="submit" className="enviarRegister">Enviar</button>
             </form>
         </>
     )

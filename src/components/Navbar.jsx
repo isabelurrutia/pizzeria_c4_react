@@ -21,7 +21,7 @@ const Navbar = () => {
                     </ul>:
                     <ul className='botonesLogin'>
                         <li className='cadaBotonLogin'>
-                            <Link to="/profile">🔐Login </Link>
+                            <Link to="/login">🔐Login </Link>
                             </li>
                         <li className='cadaBotonLogin'>
                             <Link to="/register">🔐Register </Link>

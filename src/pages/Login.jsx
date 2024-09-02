@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../style/Login.css'
 
 const Login = () => {
     const [email, setEmail]= useState('');
@@ -35,24 +36,24 @@ const Login = () => {
         };
     return (
         <>
-            <form className="formulario position-absolute top-50 start-50 translate-middle"  onSubmit={validarDatos}>
+            <form className="formularioLogin"  onSubmit={validarDatos}>
             
-                <div className="form-group m-1">
+                <div className="formEmailLogin">
                     <label>Email</label>
                     <input
                     type="text"
                     name="email"
-                    className="form-control"
+                    className="inputEmailLogin"
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     />
                 </div>
-                <div className="form-group m-1">
+                <div className="formClaveLogin">
                     <label>Contraseña</label>
                     <input
                     type="text"
                     name="clave"
-                    className="form-control"
+                    className="inputClaveLogin"
                     onChange={(e) => setClave(e.target.value)}
                     value={clave}
                     />
@@ -60,8 +61,7 @@ const Login = () => {
                 
                 {vacio ? <p className='text-danger'>Todos los campos son obligatorios</p> : null}
                 {corta ? <p className='text-danger'>la clave debe tener al menos 6 caracteres</p> : null}
-                <button type="submit" className="btn
-                btn-primary m-1">Enviar</button>
+                <button type="submit" className="enviarLogin">Enviar</button>
             </form>
         </>
     )

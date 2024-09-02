@@ -9,6 +9,7 @@ import Cart from './pages/Cart.jsx'
 import Pizza from './pages/Pizza.jsx'
 import Profile from './pages/Profile.jsx'
 import NotFound from './pages/NotFound.jsx'
+import { Navigate } from 'react-router-dom';
 
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
           path="/404"
           element={<NotFound />}
         /> 
+        <Route 
+          path='*' 
+          element={<Navigate replace to='/404'/>} 
+        />
       </Routes>
       <Footer />
     </>

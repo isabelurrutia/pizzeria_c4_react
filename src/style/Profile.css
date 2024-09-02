@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.contieneProfile{
+    color: black;
+    text-align: center;
+    padding: 100px;
+    margin: 2px;
+    border: 1px solid orange;
+}
+.cerrarSesion{
+    background-color: red;
+    color: white;
+    padding: 1%;
+    margin-top: 1%;
+    border-radius: 5%;
+    border: 1px solid orange;
+}
