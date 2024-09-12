@@ -1,16 +1,13 @@
 import {pizzaCart} from '../pizzas'
 import CartPizza from '../components/CartPizza'
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import { separador_de_miles } from "../utils/funciones_valores"
 import '../style/Cart.css'
+import MyContext from '../context/MyContext'
 
 const Cart = () => {
 
-    const [listaProductos, setListaProductos] = useState(pizzaCart)
-
-    const [totalCompra, setTotalCompra] = useState(
-        pizzaCart.reduce((total, producto) => total + producto.amount * producto.price, 0)
-    );
+    const {listaProductos, setListaProductos, totalCompra, setTotalCompra}= useContext(MyContext)
 
     // Función para eliminar un producto del carrito
     const eliminarProducto = (name) => {

@@ -1,9 +1,12 @@
 import '../style/Navbar.css'
 import { Link } from "react-router-dom";
 import {separador_de_miles} from '../utils/funciones_valores.jsx'
+import { useContext } from 'react';
+import MyContext from '../context/MyContext.jsx';
 
 const Navbar = () => {
-    const total = 25000;
+    const {totalCompra} =useContext(MyContext)
+    const total = totalCompra;
     const token = false;
     return (
         <nav>

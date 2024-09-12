@@ -1,10 +1,13 @@
 import {useState} from 'react'
 import '../style/CartPizza.css'
 import { separador_de_miles } from "../utils/funciones_valores"
+import { useContext } from 'react';
+import MyContext from '../context/MyContext';
 
 const CartPizza = ({name, price, img, initialAmount, onRemove, onUpdateTotal}) => {
-    const [amount, setAmount] = useState(initialAmount);
-
+    
+    const {amount,setAmount}= useContext(MyContext)
+    
     const restarProducto = () => {
         if (amount > 0) {
             setAmount(amount - 1);
