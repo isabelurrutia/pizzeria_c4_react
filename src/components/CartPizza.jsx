@@ -6,7 +6,7 @@ import MyContext from '../context/MyContext';
 
 const CartPizza = ({name, price, img, initialAmount, onRemove, onUpdateTotal}) => {
     
-    const {amount,setAmount}= useContext(MyContext)
+    const [amount, setAmount] = useState(initialAmount);
     
     const restarProducto = () => {
         if (amount > 0) {

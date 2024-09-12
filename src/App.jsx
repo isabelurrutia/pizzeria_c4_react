@@ -12,7 +12,7 @@ import Profile from './pages/Profile.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { Navigate } from 'react-router-dom';
 import MyContext from './context/MyContext.jsx';
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 
 function App() {
@@ -22,11 +22,16 @@ function App() {
   const [totalCompra, setTotalCompra] = useState(
       pizzaCart.reduce((total, producto) => total + producto.amount * producto.price, 0));
   
-      const initialAmount = 1;
-  const [amount, setAmount] = useState(initialAmount);
+  // Recalcular el total cada vez que cambia la lista de productos
+  useEffect(() => {
+    const nuevoTotal = listaProductos.reduce((total, producto) => {
+      return total + (producto.price * producto.amount);
+    }, 0);
+    setTotalCompra(nuevoTotal); // Actualiza el estado con el nuevo total
+  }, [listaProductos]); // Se ejecuta cada vez que listaProductos cambia
 
   return (
-    <MyContext.Provider value= {{ amount, setAmount, listaProductos, setListaProductos, totalCompra, setTotalCompra}}>
+    <MyContext.Provider value= {{ listaProductos, setListaProductos, totalCompra, setTotalCompra}}>
       <Navbar />
       <Routes>
         <Route 
