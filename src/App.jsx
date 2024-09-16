@@ -39,9 +39,14 @@ function App() {
           element={<Home />}
         />
         <Route 
+          path="/pizzeria_c4_react"
+          element={<Home />}
+        /> 
+        <Route 
           path="/register"
           element={<Register />}
         /> 
+
         <Route 
           path="/login"
           element={<Login />}

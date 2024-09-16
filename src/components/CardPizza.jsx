@@ -43,7 +43,7 @@ const CardPizza = ({name, price, ingredients, img, id, desc}) => {
             <h2>Precio: ${separador_de_miles(price)}</h2>
             <div className="botonesCard">
                 <Link to="/pizza/p001" className="botonVerMas">Ver Más 👀</Link>
-                <button className="botonAñadir" onClick={agregarAlCarrito}>Añadir 🛒</button>
+                <button className="botonAnadir" onClick={agregarAlCarrito}>Añadir 🛒</button>
             </div>
         </div>
     )
