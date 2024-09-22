@@ -11,3 +11,6 @@
     border-radius: 5%;
     border: 1px solid orange;
 }
+.pagarCarroDisable{
+    background-color: rgb(123, 126, 127) ;
+}
