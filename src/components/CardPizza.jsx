@@ -4,9 +4,16 @@ import '../style/CardPizza.css'
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import MyContext from "../context/MyContext";
+import { useNavigate } from "react-router-dom";
 
 const CardPizza = ({name, price, ingredients, img, id, desc}) => {
     const {listaProductos, setListaProductos} = useContext(MyContext)
+    const navigate = useNavigate();
+
+    // Función que navega a la página de detalles de la pizza
+    const irPizza = () => {
+        navigate(`/pizza/${id}`);
+        };
 
     // Función para añadir una pizza al carrito
     const agregarAlCarrito = () => {
@@ -42,7 +49,7 @@ const CardPizza = ({name, price, ingredients, img, id, desc}) => {
             </div>
             <h2>Precio: ${separador_de_miles(price)}</h2>
             <div className="botonesCard">
-                <Link to="/pizza/p001" className="botonVerMas">Ver Más 👀</Link>
+                <button onClick={irPizza} className="botonVerMas">Ver Más 👀</button>
                 <button className="botonAnadir" onClick={agregarAlCarrito}>Añadir 🛒</button>
             </div>
         </div>

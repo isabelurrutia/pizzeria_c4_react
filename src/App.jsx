@@ -56,7 +56,7 @@ function App() {
           element={<Cart />}
         /> 
         <Route 
-          path="/pizza/p001"
+          path="/pizza/:id"
           element={<Pizza />}
         /> 
         <Route 

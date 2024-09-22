@@ -2,20 +2,23 @@ import React from 'react'
 import '../style/Pizza.css'
 import { useEffect } from "react";
 import { useState } from "react"
+import { useParams } from "react-router-dom";
 
 
 const Pizza = () => {
-    // 3 - pizzas guardará los valores traídos desde la API
+    
     const [producto, setProducto] = useState([]);
+    const { id } = useParams();
+    
         
     // 2 - Llamamos a la función consultar Api al momento de montar el componente
     useEffect(() => {
-    consultarApi();
-        }, []);
+        consultarApi();
+    }, [id]);
     
     // 1 - Función que consulta la API
     const consultarApi = async () => {
-        const url = "http://localhost:5000/api/pizzas/p001";
+        const url = `http://localhost:5000/api/pizzas/${id}`;
         const response = await fetch(url);
         const data = await response.json();
         setProducto(data); 
@@ -30,7 +33,7 @@ const Pizza = () => {
                     <div className="pizza-details-1">
                         <img src={producto.img} alt={producto.name} className='img-pizza'/>
                         <h2>{producto.name}</h2>
-                        <p>Precio: ${producto.price}</p>
+                        <p><strong>Precio: ${producto.price}</strong></p>
                     </div> 
                     <div className="pizza-details-2">
                         <p>{producto.desc}</p>
