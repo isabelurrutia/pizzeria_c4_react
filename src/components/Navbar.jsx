@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import {separador_de_miles} from '../utils/funciones_valores.jsx'
 import { useContext } from 'react';
 import MyContext from '../context/MyContext.jsx';
+import ContextToken from '../context/ContextToken.jsx';
 
 const Navbar = () => {
     const {totalCompra} =useContext(MyContext)
+    const {token, logout} = useContext(ContextToken)
+    
     const total = totalCompra;
-    const token = false;
+    
     return (
         <nav>
             <section>
@@ -20,7 +23,9 @@ const Navbar = () => {
                         <li className='cadaBotonLogin'>
                             <Link to="/profile">🔐Profile </Link>
                         </li>
-                        <li className='cadaBotonLogin'>🔒Logout</li>
+                        <li className='cadaBotonLogin'>
+                            <button onClick={logout}>🔒Logout</button>
+                        </li>
                     </ul>:
                     <ul className='botonesLogin'>
                         <li className='cadaBotonLogin'>

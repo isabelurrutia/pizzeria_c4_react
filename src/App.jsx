@@ -12,6 +12,7 @@ import Profile from './pages/Profile.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { Navigate } from 'react-router-dom';
 import MyContext from './context/MyContext.jsx';
+import ContextTokenProvider from './context/ContextTokenProvider.jsx'
 import {useEffect, useState} from 'react'
 
 
@@ -32,47 +33,49 @@ function App() {
 
   return (
     <MyContext.Provider value= {{ listaProductos, setListaProductos, totalCompra, setTotalCompra}}>
-      <Navbar />
-      <Routes>
-        <Route 
-          index
-          element={<Home />}
-        />
-        <Route 
-          path="/pizzeria_c4_react"
-          element={<Home />}
-        /> 
-        <Route 
-          path="/register"
-          element={<Register />}
-        /> 
+      <ContextTokenProvider>
+        <Navbar />
+        <Routes>
+          <Route 
+            index
+            element={<Home />}
+          />
+          <Route 
+            path="/pizzeria_c4_react"
+            element={<Home />}
+          /> 
+          <Route 
+            path="/register"
+            element={<Register />}
+          /> 
 
-        <Route 
-          path="/login"
-          element={<Login />}
-        /> 
-        <Route 
-          path="/cart"
-          element={<Cart />}
-        /> 
-        <Route 
-          path="/pizza/:id"
-          element={<Pizza />}
-        /> 
-        <Route 
-          path="/profile"
-          element={<Profile />}
-        />     
-        <Route
-          path="/404"
-          element={<NotFound />}
-        /> 
-        <Route 
-          path='*' 
-          element={<Navigate replace to='/404'/>} 
-        />
-      </Routes>
-      <Footer />
+          <Route 
+            path="/login"
+            element={<Login />}
+          /> 
+          <Route 
+            path="/cart"
+            element={<Cart />}
+          /> 
+          <Route 
+            path="/pizza/:id"
+            element={<Pizza />}
+          /> 
+          <Route 
+            path="/profile"
+            element={<Profile />}
+          />     
+          <Route
+            path="/404"
+            element={<NotFound />}
+          /> 
+          <Route 
+            path='*' 
+            element={<Navigate replace to='/404'/>} 
+          />
+        </Routes>
+        <Footer />
+      </ContextTokenProvider>
     </MyContext.Provider>
   )
 }
